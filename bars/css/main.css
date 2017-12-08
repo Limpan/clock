@@ -1,0 +1,46 @@
+
+body {
+  background-color: #111;
+  font-family: Roboto;
+}
+
+#clock {
+  width: 100%;
+  color: #111;
+}
+
+#clock .bar {
+  position: relative;
+  min-height: 120px;
+  background-color: white;
+  margin: 20px;
+/*  transition: width 1s; */
+  border-radius: 6px;
+}
+
+#clock .number {
+  position: absolute;
+  bottom: -41px;
+  right: 0px;
+  padding-right: 0.25em;
+  font-size: 6em;
+}
+
+#clock .outside {
+  color: white;
+  right: 0px;
+  left: 100%;
+  transform: translate(30px, 0);
+}
+
+#clock .hours {
+  border-top: 6px solid #C410B6;
+}
+
+#clock .minutes {
+  border-top: 6px solid #FA2166;
+}
+
+#clock .seconds {
+  border-top: 6px solid #0DC0D1;
+}

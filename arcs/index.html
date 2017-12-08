@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>clock</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+<!--  <link rel="stylesheet" type="text/css" href="css/skeleton.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <svg id="clock" viewBox="-150 -150 300 300">
+      <path class="month" fill="none" stroke="#f24405" stroke-width="16" />
+      <text id="monthText" x="2" y="48" fill="#f24405" font-size="12" font-family="Roboto">0</text>
+      <path class="day" fill="none" stroke="#f46104" stroke-width="16" />
+      <text id="dayText" x="2" y="68" fill="#f46104" font-size="12" font-family="Roboto">0</text>
+      <path class="weekday" fill="none" stroke="#f47a03" stroke-width="16" />
+      <text id="weekdayText" x="2" y="88" fill="#f47a03" font-size="12" font-family="Roboto">0</text>
+      <path class="hours" fill="none" stroke="#f48f03" stroke-width="16" />
+      <text id="hoursText" x="2" y="108" fill="#f48f03" font-size="12" font-family="Roboto">0</text>
+      <path class="minutes" fill="none" stroke="#f4a303" stroke-width="16" />
+      <text id="minutesText" x="2" y="128" fill="#f4a303" font-size="12" font-family="Roboto">0</text>
+      <path class="seconds" fill="none" stroke="#f2b705" stroke-width="16" />
+      <text id="secondsText" x="2" y="148" fill="#f2b705" font-size="12" font-family="Roboto">0</text>
+    </svg>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
