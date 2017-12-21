@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>clock</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <svg id="clock" viewBox="-100 -100 200 200">
+      <defs>
+        <linearGradient id="gradient1" gradientTransform="rotate(45)">
+          <stop offset="0%" stop-color="#282828" />
+          <stop offset="50%" stop-color="#555555" />
+          <stop offset="100%" stop-color="#282828" />
+        </linearGradient>
+
+        <linearGradient id="gradient2" gradientTransform="rotate(45)">
+          <stop offset="0%" stop-color="#383838" />
+          <stop offset="50%" stop-color="#181818" />
+          <stop offset="100%" stop-color="#383838" />
+        </linearGradient>
+
+        <linearGradient id="gradient3" gradientTransform="rotate(45)">
+          <stop offset="0%" stop-color="rgb(11, 147, 199)" stop-opacity="0.2" />
+          <stop offset="100%" stop-color="rgb(255, 255, 255)" stop-opacity="0" />
+        </linearGradient>
+
+        <mask id="dialMask">
+          <circle cx="0" cy="0" r="80" fill="#FFFFFF" />
+        </mask>
+
+<!--        <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%"> -->
+        <filter id="dropShadow1">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+          <feOffset dx="3" dy="3" />
+          <feMerge>
+              <feMergeNode />
+              <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+
+        <filter id="dropShadow2">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+          <feOffset dx="2" dy="2" />
+          <feMerge>
+              <feMergeNode />
+              <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+
+        <filter id="blur">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+        </filter>
+      </defs>
+
+      <!-- Ytterkant -->
+      <circle cx="0" cy="0" r="90" fill="url(0, 0, 0)" filter="url(#dropShadow1)" />
+      <circle cx="0" cy="0" r="90" fill="url(#gradient1)" />
+      <circle cx="0" cy="0" r="81" fill="url(#gradient2)" />
+
+      <!-- Bakre urtavla -->
+      <circle cx="0" cy="0" r="80" fill="#111" />
+
+      <!-- Visare -->
+      <line id="dial" x1="0", y1="0" x2="-100" y2="-100" stroke="rgb(11, 147, 199)" stroke-width="8" mask="url(#dialMask)" />
+
+      <!-- Främre urtavla -->
+      <circle cx="0" cy="0" r="60" fill="rgb(30, 30, 30)" filter="url(#dropShadow2)" />
+
+      <!-- Gloss -->
+      <circle cx="0" cy="0" r="78" fill="url(#gradient3)" filter="url(#blur)" />
+    </svg>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

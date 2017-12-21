@@ -1,0 +1,21 @@
+
+body {
+  background-color: #111;
+  font-family: Roboto;
+}
+
+/* ---- Center SVG --------------------------------------------------------- */
+
+html, body, .container {
+  height: 100%;
+}
+
+#clock {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  height: 600px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
